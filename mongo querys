@@ -1,0 +1,8 @@
+db.books.insertOne(
+   { "title" : "libro 1",
+     "author" : "matias"
+   }
+)
+
+
+myCursor = db.books.find( {} )
