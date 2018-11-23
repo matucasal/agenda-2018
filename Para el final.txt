@@ -1,0 +1,9 @@
+-- Agregar caratula de la up en el readme de la up
+-- Para probarlo run test.js y entrar aca
+https://aee5b0314aa84e9f8ea2bccad3e9162d.vfs.cloud9.us-east-2.amazonaws.com/#/
+
+
+
+-- Para ver quienes asisten al event2
+
+https://aee5b0314aa84e9f8ea2bccad3e9162d.vfs.cloud9.us-east-2.amazonaws.com/api/events/5bb7cde51e2b8e11d1664810/users

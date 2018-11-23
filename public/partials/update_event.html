@@ -1,0 +1,43 @@
+<div class="section">
+<div class="container">
+
+    <!--<form ng-submit="updateEvent()" id="editForm" form-horizontal alert alert-warning hidden>-->
+        <form class="form-horizontal alert alert-warning" id="editForm" ng-submit="updateEvent()" hidden>
+        <input type="hidden" name="_id" ng-model="currentEvent._id" ng-value="{{currentEvent._id}}"/>
+        <div class="form-group">
+            <label for="nombre">Nombre del evento:</label>
+            <input type="text" class="form-control" id="nombre" ng-model="currentEvent.nombre" value="{{currentEvent.nombre}}">
+        </div>
+        <div class="form-group">
+            <label for="direccion">Direccion:</label>
+            <input type="text" class="form-control" id="direccion" ng-model="currentEvent.direccion" value="{{currentEvent.direccion}}">
+        </div>
+            <label for="fecha">Fecha:</label>
+             <p class="input-group">
+              <input type="text" ng-model="currentEvent.fecha" class="form-control" value="{{currentEvent.fecha}}" id="fecha" datepicker-popup="{{format}}" is-open="opened" datepicker-options="dateOptions" close-text="Close" />
+              <span class="input-group-btn">
+                <button class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+            </p>
+        
+        
+        
+         <div class="form-group">
+            <label for="precio">Precio:</label>
+            <input type="double" class="form-control" id="precio" ng-model="currentEvent.precio" value="{{currentEvent.precio}}">
+        </div>
+        
+         <div class="form-group">
+            <label for="descripcion">Descripcion:</label>
+            <input type="text" class="form-control" id="descripcion" ng-model="currentEvent.descripcion" value="{{currentEvent.descripcion}}">
+        </div>
+        
+        
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>   
+            
+    </div>
+</div>
+
+
+

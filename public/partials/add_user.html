@@ -1,0 +1,36 @@
+<div class="section">
+<p>Usuario actual: {{currentUser.username}}</p>
+    <div class="container">
+    
+     <h2>Agregar user</h2>
+
+    <form ng-submit="submitUser(user)">
+        <div class="form-group">
+            <label for="nombre">Nombre del user:</label>
+            <input type="text" class="form-control" id="nombre" ng-model="user.nombre">
+        </div>
+        <div class="form-group">
+            <label for="direccion">Apellido:</label>
+            <input type="text" class="form-control" id="apellido" ng-model="user.apellido">
+        </div>
+      
+        
+         <div class="form-group">
+            <label for="edad">Edad:</label>
+            <input type="number" class="form-control" id="edad" ng-model="user.edad">
+        </div>
+        
+         <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" class="form-control" id="username" ng-model="user.username">
+        </div>
+        
+        
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>   
+            
+    </div>
+</div>
+
+
+

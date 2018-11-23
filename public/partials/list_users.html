@@ -1,0 +1,35 @@
+<div class="section">
+ <p>Usuario actual: {{currentUser.username}}</p>
+ 
+    <div class="container" ng-init="listUsers()" >
+  
+    <h2>Listado de Usuarios: {{ todos.length }}</h2>
+   
+       <div id="products" class="row list-group" ng-repeat="user in users">
+    
+        <div class="caption">
+            <h4 class="group inner list-group-item-heading">
+            {{ event.nombre }}</h4>
+            <p class="group inner list-group-item-text">
+            <li>Id: {{ user._id }}</li>
+            <li>Nombre: {{ user.nombre }}</li>
+            <li>Apellido: {{ user.apellido }} </li>
+            <li>Username: {{ user.username }} </li>
+            </p>
+            
+            <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                           <a class="btn btn-success" ng-click="seleccionarCurrentUser(user)">Seleccionar Usuario</a>
+                        </div>
+            </div>
+            
+        </div>
+     
+     
+            
+            
+    </div>
+</div>
+
+
+

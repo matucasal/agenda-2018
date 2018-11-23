@@ -1,0 +1,58 @@
+<div class="section">
+    
+    <!-- <div ng-include="'#/add_event'"></div> -->
+    <!-- <div ng-include src="'#/add_event'"></div> -->
+    <div ng-include src="'partials/update_event.html'"></div>
+
+    <p>Usuario actual: {{currentUser.username}}</p>
+
+    <div class="container" ng-init="listEvents()" >
+  
+    <h2>Listado de eventos: {{ todos.length }}</h2>
+   
+       <div id="products" class="row list-group" ng-repeat="event in events">
+        <div class="item  col-xs-4 col-lg-4 list-group-item" > 
+            <div class="thumbnail">
+                <div class="caption">
+                    <h4 class="group inner list-group-item-heading">
+                       {{ event.nombre }}</h4>
+                    <p class="group inner list-group-item-text">
+                       <li>Id: {{ event._id }}</li>
+                       <li>Descripción: {{ event.descripcion }}</li>
+                       <li>Fecha: {{ event.fecha }} </li>
+                       <li>Direccion: {{ event.direccion }} </li>
+                       <li>Precio: ${{ event.precio }} </li>
+                       </p>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                           <a class="btn btn-success" ng-click="asistirEvent(event,currentUser._id)">Asistir</a>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            
+                            <a class="btn btn-success" ng-click="mostarAsistentes(event)">Ver asistentes</a>
+                            <a class="btn btn-success" ng-click="editInfo(event)">Editar</a>
+                            <a class="btn btn-success" ng-click="deleteEvent(event)">Eliminar</a>
+                        </div>
+                        <!-- <div class="row">
+                           <div class="row list-group" ng-repeat="asistente in asistentes">
+                                <p class="group inner list-group-item-text">
+                                <li>Nombre: {{ asistente.nombre }} - Apellido: {{ asistente.apellido }} </li>
+                                </p>
+                            </div>
+                        </div>-->
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     
+     
+            
+            
+    </div>
+</div>
+
+
+
