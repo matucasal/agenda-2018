@@ -31,6 +31,7 @@ userRouter.route('/:userId')
             user.nombre = req.body.nombre;
             user.apellido = req.body.apellido;
             user.edad = req.body.edad;
+            user.username = req.body.username;
             user.save()
             res.json(user)
         }) 
